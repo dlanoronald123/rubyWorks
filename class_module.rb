@@ -18,6 +18,11 @@ module AdminPermisson
      @ip_address = ip_address
     end
 
+    def change_password=(password)
+      @password = password
+      puts "Password changed!"
+    end
+
     protected
     def login
       puts "User logged in. IP address: #{@ip_address}"
@@ -32,11 +37,6 @@ module AdminPermisson
     end
     include AdminPermisson
 
-    def change_password=(password)
-      @password = password
-      puts "Password changed!"
-  end
-
   end
   
   
@@ -45,11 +45,7 @@ module AdminPermisson
       puts "User logged in. IP address: #{@ip_address}"
     end
     include BuyerPermission
-    
-    def change_password=(password)
-      @password = password
-      puts "Password changed!"
-  end
+  
 
   end
   
