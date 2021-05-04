@@ -33,20 +33,17 @@ module AdminPermisson
   class Admin < User
 
     def admin_login
-      puts "User logged in. IP address: #{@ip_address}"
+      login
     end
     include AdminPermisson
-
   end
   
   
   class Buyer < User
     def buyer_login
-      puts "User logged in. IP address: #{@ip_address}"
+      login
     end
     include BuyerPermission
-  
-
   end
   
   
