@@ -1,5 +1,5 @@
 class Confection
-    def prepare
+    def bake
         puts "Baking at 350 degrees for 25 minutes."
     end
 end
@@ -7,12 +7,15 @@ end
 
 class Cupcake < Confection
     def prepare
-        puts "Baking at 350 degrees for 25 minutes."
+        bake
         puts "Applying frosting" 
     end
 end
 
 class BananaCake < Confection 
+    def prepare
+        bake
+    end
 end
 
 cupcake = Cupcake.new
