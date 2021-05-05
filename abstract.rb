@@ -22,8 +22,8 @@
 class Area
     def initialize(shape,length, width)
         @shape = shape
-        @length = length
-        @width = width
+        @length = length.to_f
+        @width = width.to_f
     end
     
     def area_of_shape

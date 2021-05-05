@@ -1,7 +1,7 @@
 class Area
     def initialize(length, width)
-        @length = length
-        @width = width
+        @length = length.to_f
+        @width = width.to_f
     end
     def get_area
         @length * @width
