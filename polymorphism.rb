@@ -18,12 +18,12 @@ class Person
   
   class Student < Person
     def job
-      puts "I am #{@name}. I am here #{@occupation} with a salary of #{@salary}"
+      puts "I am #{@name}. I am here #{@occupation} with a minimum salary of #{@salary}"
     end
   end
   
   avion = Owner.new("Avion School", "owner", "the profit of the company")
-  ronald = Student.new("Ronald Magno", "to study to become Software Developer in the future", "Php 30,000 minimum :)")
+  ronald = Student.new("Ronald Magno", "to study to become Software Developer in the future", "Php 30,000 :)")
 
   avion.job
   ronald.job
