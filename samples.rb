@@ -236,72 +236,79 @@
 # end
 # puts lowest
 
-class Question
-  attr_accessor :prompt, :answer
-  def initialize(promt,answer)
-    @promt = promt
-    @answer = answer
-  end
-end
+# class Question
+#   attr_accessor :prompt, :answer
+#   def initialize(promt,answer)
+#     @promt = promt
+#     @answer = answer
+#   end
+# end
 
-p1 = "What is one plus one? \n a.1 \n b.2\n c.3"
-p2 = "What color are bananas? \n a.red \n b.blue\n c.yellow"
-p3 = "What color are apples? \n a.red \n b.blue\n c.yellow"
+# p1 = "What is one plus one? \n a.1 \n b.2\n c.3"
+# p2 = "What color are bananas? \n a.red \n b.blue\n c.yellow"
+# p3 = "What color are apples? \n a.red \n b.blue\n c.yellow"
 
-questions = [
-  Question.new(p1,"1"),
-  Question.new(p2,"yellow"),
-  Question.new(p3,"red")
-  ]
+# questions = [
+#   Question.new(p1,"1"),
+#   Question.new(p2,"yellow"),
+#   Question.new(p3,"red")
+#   ]
   
-def run_test(questions)
-  answer = ""
-  score = 0
-  for question in questions
-    puts question.promt
-    answer = gets.chomp()
-    if answer == question.answer
-      score += 1
-    end
-  end
-  puts ("You got" +score.to_s+ "/" + questions.length().to_s)
-end
+# def run_test(questions)
+#   answer = ""
+#   score = 0
+#   for question in questions
+#     puts question.promt
+#     answer = gets.chomp()
+#     if answer == question.answer
+#       score += 1
+#     end
+#   end
+#   puts ("You got" +score.to_s+ "/" + questions.length().to_s)
+# end
 
-run_test(questions)
+# run_test(questions)
 
-
-class Question
-    attr_accessor :prompt, :answer
-    def initialize(promt,answer)
-      @promt = promt
-      @answer = answer
-    end
-  end
   
-  p1 = "What is one plus one? \n a.1 \n b.2\n c.3"
-  p2 = "What color are bananas? \n a.red \n b.blue\n c.yellow"
-  p3 = "What color are apples? \n a.red \n b.blue\n c.yellow"
-  
-  questions = [
-    Question.new(p1,"1"),
-    Question.new(p2,"yellow"),
-    Question.new(p3,"red")
-    ]
-    
-  def run_test(questions)
-    answer = ""
-    score = 0
-    for question in questions
-      puts question.promt
-      answer = gets.chomp()
-      if answer == question.answer
-        score += 1
-      end
-    end
-    puts ("You got" +score.to_s+ "/" + questions.length().to_s)
-  end
-  
-  run_test(questions)
-  
+#-------------------------------------------
 
-
+  # class Account
+  #   attr_reader :balance
+  #   attr_reader :name
+  #   def initialize(name, balance=100)
+  #     @name = name
+  #     @balance = balance
+  #   end
+  
+  #   private
+  
+  #   def pin
+  #     @pin = 1234
+  #   end
+  
+  #   def pin_error
+  #     return "Access denied: incorrect PIN."
+  #   end
+  
+  #   public
+  
+  #   def display_balance(pin_number)
+  #     if pin_number == pin
+  #       puts "Balance: #{@balance}"
+  #     else
+  #       puts pin_error
+  #     end
+  #   end
+  
+  #   def withdraw(pin_number, amount)
+  #     if pin_number == @pin
+  #       @balance -= amount
+  #       puts "Withdrew #{amount}. New balance: #{balance}"
+  #     else
+  #       puts pin_error
+  #     end
+  #   end
+  # end
+  
+  # checking_account = Account.new ("John", 100)
+  # checking_account.display_balance(1234)
