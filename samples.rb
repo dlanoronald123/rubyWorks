@@ -312,3 +312,48 @@
   
   # checking_account = Account.new ("John", 100)
   # checking_account.display_balance(1234)
+
+class Area
+    def get(shape)
+        shape.area
+    end
+
+end
+
+class Shape
+    def show_area(area)
+        puts "The #{@shape} has an area of #{area}"
+    end
+end
+
+class Square < Shape
+    def initialize(side)
+        @side = side
+        @shape = "square"
+    end
+    def area
+        @side**2
+    end
+end
+
+class Rectangle < Shape
+    def initialize(length, width)
+        @length = length
+        @width = width
+        @shape = "rectangle"
+    end
+    def area
+        @length * @width
+    end
+end
+
+class Triangle < Shape
+    def initialize(base, height)
+        @base = base.to_f
+        @height = height.to_f
+        @shape = "triangle"
+    end
+    def area
+        0.5 * @base * @height
+    end
+end
