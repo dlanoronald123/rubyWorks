@@ -1,17 +1,28 @@
-class Student
-    def initialize(name, grade)
+class TuitionReport
+    def initialize(name, total)
         @name = name
-        @grade = grade
-    end
-
-    def student_grade
-        puts "The student named #{@name} has a grade of #{@grade}."
+        @total = total
     end
 end
 
-class FirstYear < Student
-    def required_grade
-       puts "The grade needed to pass the subject was #{@grade}" 
+class Invoice < TuitionReport
+    def print
+       puts "Invoice" 
+       puts @name
+       puts @total
+    end
+end
+
+class Billing < TuitionReport
+    def initialize(address)
+        @address = address
+    end
+
+    def print
+        puts "Billing"
+        puts @name
+        puts @address
+        puts @total
     end
 end
 
