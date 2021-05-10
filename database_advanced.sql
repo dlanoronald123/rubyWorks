@@ -13,7 +13,7 @@ VALUES(2, 2, 'A'),
 
 
 
-SELECT  * FROM students AS s INNER JOIN classrooms AS c ON c.student_id  = s.id;
+SELECT  * FROM students AS s INNER JOIN classrooms AS c ON s.id  = c.id;
 SELECT  * FROM students AS s LEFT JOIN classrooms AS c ON c.id  = s.id;
 SELECT  * FROM students AS s RIGHT JOIN classrooms AS c ON c.id  = s.id;
 SELECT  * FROM students AS s FULL JOIN classrooms AS c ON c.id  = s.id;
