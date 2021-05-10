@@ -1,7 +1,8 @@
 CREATE TABLE classrooms (id INTEGER PRIMARY key not NULL,student_id INTEGER, section VARCHAR(10))
 
 INSERT INTO classrooms(id, student_id, section)
-VALUES(2, 2, 'A'),
+VALUES(1, 1, 'A'),
+      (2, 2, 'A'),
       (3, 3, 'B'),
       (4, 4, 'C'),
       (5, 5, 'B'),
@@ -13,7 +14,7 @@ VALUES(2, 2, 'A'),
 
 
 
-SELECT  * FROM students AS s INNER JOIN classrooms AS c ON s.id  = c.id;
-SELECT  * FROM students AS s LEFT JOIN classrooms AS c ON c.id  = s.id;
-SELECT  * FROM students AS s RIGHT JOIN classrooms AS c ON c.id  = s.id;
-SELECT  * FROM students AS s FULL JOIN classrooms AS c ON c.id  = s.id;
+SELECT  * FROM students AS s INNER JOIN classrooms AS c ON s.id  = c.student_id;
+SELECT  * FROM students AS s LEFT JOIN classrooms AS c ON s.id  = c.student_id;
+SELECT  * FROM students AS s RIGHT JOIN classrooms AS c ON s.id  = c.student_id;
+SELECT  * FROM students AS s FULL JOIN classrooms AS c ON s.id  = c.student_id;
