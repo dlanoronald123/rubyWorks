@@ -14,7 +14,9 @@ class Invoice < TuitionReport
 end
 
 class Billing < TuitionReport
-    def initialize(address)
+    def initialize(name,total,address)
+        @name = name
+        @total = total
         @address = address
     end
 
@@ -26,3 +28,8 @@ class Billing < TuitionReport
     end
 end
 
+invoice = Invoice.new("Ronald", 100)
+invoice.print
+
+billing = Billing.new("Ronald",100,"Bulacan")
+billing.print
